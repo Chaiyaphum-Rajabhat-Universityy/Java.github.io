@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+#mydiv1, #myDiv2, #myDiv3, #myDiv4, #myDiv5, #myDiv6, #myDiv7, #myDiv8, #myDiv9, #myDiv10 {
+	background-color: Aqua;
+	padding: 50px;
+	color: #000;
+}
+#demo, #myP2,#myP3, #myP4,#myP5, #myP6, #myP7, #myP8, #myP9, #myP10 {
+    background-color:white; 
+    font-size: 20px;
+    border: 1px solid;
+    padding: 20px;
+}
+#myDiv8 #myDiv8 {
+}
+</style>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+</head>
+<body>
+
+<h1 style="font-size:300%;text-align:center;font-family: Impact;" id="id1"> JavaScript สามารถทำอะไรได้บ้างนะ ??</h1>
+<button type="button"
+onclick="document.getElementById('id1').style.color = 'LawnGreen '">
+คลิกเปลี่ยนสีตัวอักษร</button> <br>
+
+
+<div id="mydiv1">
+  <h2> 1.JavaScript สามารถคลิกเปลี่ยนเนื้อหาได้ </h2>
+  <p style="font-size:200%;font-family: Impact;"id="demo"> Hello, I'm Ms.Aonanong Phumphuang</p>
+
+<button type="button" onclick='document.getElementById("demo").innerHTML = "I have a headache with my site."'>คลิกเพื่อเปลี่ยนเนื้อหา</button>
+</div>
+<br>
+
+
+<div id="myDiv2">
+  <h2>2.JavaScript สามารถแสดงรูปภาพที่ซ่อนไว้ได้ </h2>
+ 
+  <img id="myp2" style="display:none" src="https://sv1.picz.in.th/images/2018/11/24/3sP7X8.jpg">
+<button type="button" onclick="document.getElementById('myp2').style.display='block'">คลิกเพื่อดูรูปภาพ</button>
+</div>
+<br>
+<div id="myDiv3">
+ <h2>3.JavaScript สามารถเปลี่ยนขนาดตัวอักษรได้ </h2>
+  <p id="myp3">ฉันเรียนอยู่สาขาวิทยาการคอมพิวเตอร์ ชั้นปีที่2 </p>
+
+<button type="button" onclick="document.getElementById('myp3').style.fontSize='50px'">คลิกเพื่อขยายตัวอักษร</button>
+
+</div>
+<br>
+<div id="myDiv4">
+  <h2>4.JavaScript สามารถเปลี่ยนค่าแอตทริบิวต์ได้</h2>
+  
+  <button onclick="document.getElementById('myImage').src='https://sv1.picz.in.th/images/2018/12/01/3a2VIb.jpg'">ภาพวาดการ์ตูน</button>
+
+<img id="myImage" src="https://sv1.picz.in.th/images/2018/12/01/3a2awf.jpg" style="width:300px">
+
+<button onclick="document.getElementById('myImage').src='https://sv1.picz.in.th/images/2018/12/01/3a2awf.jpg'">ภาพถ่ายธรรมชาติ</button>
+</div>
+<br>
+<div id="myDiv5">
+  <h2>5.JavaScript สามารถดูเวลาและวันที่ได้ </h2>
+  <button type="button"
+onclick="document.getElementById('myp5').innerHTML = Date()">
+คลิกเพื่อดูเวลาและวันที่.</button>
+<p id="myp5"></p>
+</div>
+
+<br>
+<div id="myDiv6">
+  <h2>6.JavaScript สามารถแจ้งเตือน หรือ แสดงเนื้อหา</h2>
+  <button id="myp6">คลิกที่นี้ </button>
+
+<script>
+document.getElementById("myp6").addEventListener("click", myFunction);
+
+function myFunction() {
+    alert ("อธิบายไม่ถูก แต่รู้สึกดี.");
+}
+</script>
+ </div>
+<br>
+
+ 
+<div id="myDiv7">
+  <h2>7.JavaScript สามารถเรียงลำดับค่าอาเรย์จากน้อยไปมากได้</h2>
+ <button onclick="myFunction()">คลิกเพื่อเรียงลำดับ</button>
+  <p id="myp7"></p>
+<script>
+var points = [40, 100, 1, 5, 25, 10, 9, 38, 26, 68, 32];
+document.getElementById("myp7").innerHTML = points;    
+function myFunction() {
+    points.sort(function(a, b){return a - b});
+    document.getElementById("myp7").innerHTML = points;
+}
+    </script>
+    </div>
+ <br>
+ 
+ <div id="myDiv8">
+ <h2>8.JavaScript สามารถซ่อนเนื้อหาได้</h2>
+
+<p style="font-size:100%;font-family: Impact;"id="myp8">ฉันอยากจะนอนหลับในเวลาเรียน ง่วงจัง!!</p>
+
+<button type="button" onclick="document.getElementById('myp8').style.display='none'">คลิกเพื่อซ่อน</button>
+
+</div> <br>
+
+<div id="myDiv9">
+<h2>9.JavaScript สามารถแสดงปี ค.ศ.ปัจจุบันได้</h2>
+<p id="myp9"></p>
+
+<script>
+var d = new Date();
+document.getElementById("myp9").innerHTML = d.getFullYear();
+</script>
+</div><br>
+
+<div id="myDiv10">
+<h2>10.JavaScript สามารถแสดงวันปัจจุบันได้ </h2>
+<p id="myp10"></p>
+
+<script>
+var day;
+switch (new Date().getDay()) {
+    case 0:
+        day = "Sunday";
+        break;
+    case 1:
+        day = "Monday";
+        break;
+    case 2:
+        day = "Tuesday";
+        break;
+    case 3:
+        day = "Wednesday";
+        break;
+    case 4:
+        day = "Thursday";
+        break;
+    case 5:
+        day = "Friday";
+        break;
+    case  6:
+        day = "Saturday";
+}
+document.getElementById("myp10").innerHTML = "Today is " + day;
+</script>
+</div><br>
+
+
+
+</body>
+</html>
